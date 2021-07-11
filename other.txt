@@ -1,0 +1,29 @@
+
+   
+    if (message.content === "play") {
+
+   const connection = message.member.voice.channel.join();
+  const dispatcher = connection.play('https://cdn.glitch.com/f7f97b8d-29f5-4a9f-9680-2a805805ca4c%2Fsonmg_1.mp3');
+    }
+  
+  
+  
+  if (message.content === "leave") {
+message.channel.send("lmao fine stupid idiot")
+   const connection = message.member.voice.channel.join();
+message.member.voice.channel.leave();
+//dispatcher.destroy();
+  }
+  
+    if (message.content === 'join') {
+    // Only try to join the sender's voice channel if they are in one themselves
+    if (message.member.voice.channel) {
+      const connection = message.member.voice.channel.join();
+      message.member.voice.channel.leave();
+      message.member.voice.channel.join();
+      message.member.voice.channel.leave();
+      message.member.voice.channel.join();
+      message.member.voice.channel.leave();
+
+    }
+  }
